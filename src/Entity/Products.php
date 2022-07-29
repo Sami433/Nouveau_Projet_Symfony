@@ -2,11 +2,11 @@
 
 namespace App\Entity;
 
-use App\Repository\HerosRepository;
+use App\Repository\ProductsRepository;
 use Doctrine\ORM\Mapping as ORM;
 
-#[ORM\Entity(repositoryClass: HerosRepository::class)]
-class Heros
+#[ORM\Entity(repositoryClass: ProductsRepository::class)]
+class Products
 {
     #[ORM\Id]
     #[ORM\GeneratedValue]
@@ -15,9 +15,6 @@ class Heros
 
     #[ORM\Column(length: 255)]
     private ?string $titre = null;
-
-    #[ORM\Column(length: 255)]
-    private ?string $soustitre = null;
 
     #[ORM\Column(length: 255)]
     private ?string $image = null;
@@ -35,18 +32,6 @@ class Heros
     public function setTitre(string $titre): self
     {
         $this->titre = $titre;
-
-        return $this;
-    }
-
-    public function getSoustitre(): ?string
-    {
-        return $this->soustitre;
-    }
-
-    public function setSoustitre(string $soustitre): self
-    {
-        $this->soustitre = $soustitre;
 
         return $this;
     }

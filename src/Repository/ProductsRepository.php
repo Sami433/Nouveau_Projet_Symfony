@@ -2,26 +2,26 @@
 
 namespace App\Repository;
 
-use App\Entity\Heros;
+use App\Entity\Products;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Doctrine\Persistence\ManagerRegistry;
 
 /**
- * @extends ServiceEntityRepository<Heros>
+ * @extends ServiceEntityRepository<Products>
  *
- * @method Heros|null find($id, $lockMode = null, $lockVersion = null)
- * @method Heros|null findOneBy(array $criteria, array $orderBy = null)
- * @method Heros[]    findAll()
- * @method Heros[]    findBy(array $criteria, array $orderBy = null, $limit = null, $offset = null)
+ * @method Products|null find($id, $lockMode = null, $lockVersion = null)
+ * @method Products|null findOneBy(array $criteria, array $orderBy = null)
+ * @method Products[]    findAll()
+ * @method Products[]    findBy(array $criteria, array $orderBy = null, $limit = null, $offset = null)
  */
-class HerosRepository extends ServiceEntityRepository
+class ProductsRepository extends ServiceEntityRepository
 {
     public function __construct(ManagerRegistry $registry)
     {
-        parent::__construct($registry, Heros::class);
+        parent::__construct($registry, Products::class);
     }
 
-    public function add(Heros $entity, bool $flush = false): void
+    public function add(Products $entity, bool $flush = false): void
     {
         $this->getEntityManager()->persist($entity);
 
@@ -30,7 +30,7 @@ class HerosRepository extends ServiceEntityRepository
         }
     }
 
-    public function remove(Heros $entity, bool $flush = false): void
+    public function remove(Products $entity, bool $flush = false): void
     {
         $this->getEntityManager()->remove($entity);
 
@@ -40,7 +40,7 @@ class HerosRepository extends ServiceEntityRepository
     }
 
 //    /**
-//     * @return Heros[] Returns an array of Heros objects
+//     * @return Products[] Returns an array of Products objects
 //     */
 //    public function findByExampleField($value): array
 //    {
@@ -54,7 +54,7 @@ class HerosRepository extends ServiceEntityRepository
 //        ;
 //    }
 
-//    public function findOneBySomeField($value): ?Heros
+//    public function findOneBySomeField($value): ?Products
 //    {
 //        return $this->createQueryBuilder('h')
 //            ->andWhere('h.exampleField = :val')

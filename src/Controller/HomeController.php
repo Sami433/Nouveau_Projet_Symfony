@@ -2,7 +2,7 @@
 
 namespace App\Controller;
 
-use App\Entity\Heros;
+use App\Entity\Products;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
@@ -29,9 +29,9 @@ public function __construct (EntityManagerInterface $entityManager ){
     {
 
 
-        $heros = $this -> entityManager -> getRepository(Heros::class) -> findAll();
+        $Products = $this -> entityManager -> getRepository(Products::class) -> findAll();
         return $this -> render ('home/index.html.twig', [
-            'heros' =>  $heros]);
+            'Products' =>  $Products]);
 
 
     

@@ -17,22 +17,16 @@
     color: #43db43 !important;
 }
 
-.img-heros{
-
-width: 700px;
+.img-products{
+margin-top: 50px;
+width: 800px;
 
 }
 
 
-.titre_heros{
-    font-size: 40px;
-    font-weight: 900;
-    font-family: 'Inter', sans-serif;
-  color:#43db43;
-}
-
-.sous_heros{
+.product_title{
     font-size: 25px;
-    font-weight: 400;
+    font-weight: 600;
     font-family: 'Inter', sans-serif;
+    color: #000000 !important;
 }
